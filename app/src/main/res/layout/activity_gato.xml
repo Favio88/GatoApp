@@ -6,7 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".GatoActivity">
 
+    <LinearLayout
+        android:id="@+id/inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/btnJugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Juego"/>
+
+    </LinearLayout>
+
     <RelativeLayout
+        android:id="@+id/juego"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
@@ -15,28 +31,32 @@
             android:id="@+id/btn1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_toRightOf="@id/btn1"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn3"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/btn2"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn4"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_below="@+id/btn1"
-            android:text=" " />
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn5"
@@ -44,7 +64,8 @@
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/btn4"
             android:layout_below="@+id/btn2"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn6"
@@ -52,14 +73,16 @@
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/btn5"
             android:layout_below="@+id/btn3"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn7"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_below="@+id/btn4"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn8"
@@ -67,7 +90,8 @@
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/btn7"
             android:layout_below="@id/btn5"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
         <Button
             android:id="@+id/btn9"
@@ -75,8 +99,24 @@
             android:layout_height="100dp"
             android:layout_toRightOf="@+id/btn2"
             android:layout_below="@+id/btn6"
-            android:text=" "/>
+            android:text=" "
+            android:textSize="70sp"/>
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ganador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/juego"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtv_ganador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Ganador: ????" />
+    </LinearLayout>
 
 </RelativeLayout>
