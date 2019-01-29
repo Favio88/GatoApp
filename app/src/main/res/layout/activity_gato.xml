@@ -109,14 +109,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/juego"
-        android:layout_marginTop="70dp"
-        android:gravity="center">
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtv_victoriasJ1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/colorRed"
+            android:textSize="40sp"
+            android:layout_marginRight="40dp"/>
 
         <TextView
             android:id="@+id/txtv_ganador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Ganador: ????" />
+
+        <TextView
+            android:id="@+id/txtv_victoriasJ2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/colorBlue"
+            android:textSize="40sp"
+            android:layout_marginLeft="40dp"/>
+
     </LinearLayout>
 
 </RelativeLayout>
