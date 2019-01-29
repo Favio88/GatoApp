@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     TextView txtv_contador;
-    int contador=7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +23,9 @@ public class MainActivity extends AppCompatActivity {
         new CountDownTimer(7000, 1000){
 
             @Override
-            public void onTick(long millisUntilFinished) {
+            public void onTick(long l) {
 
-                contador--;
-                txtv_contador.setText(Integer.toString(contador));
+                txtv_contador.setText(String.valueOf(l/1000));
             }
 
             @Override

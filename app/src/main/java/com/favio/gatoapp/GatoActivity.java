@@ -2,6 +2,7 @@ package com.favio.gatoapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -50,28 +51,7 @@ public class GatoActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 turno=false;
-
-                btn1.setEnabled(true);
-                btn2.setEnabled(true);
-                btn3.setEnabled(true);
-                btn4.setEnabled(true);
-                btn5.setEnabled(true);
-                btn6.setEnabled(true);
-                btn7.setEnabled(true);
-                btn8.setEnabled(true);
-                btn9.setEnabled(true);
-
-                btn1.setText(" ");
-                btn2.setText(" ");
-                btn3.setText(" ");
-                btn4.setText(" ");
-                btn5.setText(" ");
-                btn6.setText(" ");
-                btn7.setText(" ");
-                btn8.setText(" ");
-                btn9.setText(" ");
-
-                Toast.makeText(GatoActivity.this, "Turno Jugador 1", Toast.LENGTH_SHORT).show();
+                limpiar();
             }
         });
 
@@ -94,6 +74,9 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn1 = (Button) v;
                 valorBtn1 = btn1.getText().toString();
+                comparar();
+
+                // Log.d("variable",btn1.getText().toString());
             }
         });
 
@@ -115,6 +98,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn2 = (Button) v;
                 valorBtn2 = btn2.getText().toString();
+                comparar();
             }
         });
 
@@ -136,6 +120,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn3 = (Button) v;
                 valorBtn3 = btn3.getText().toString();
+                comparar();
             }
         });
 
@@ -157,6 +142,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn4 = (Button) v;
                 valorBtn4 = btn4.getText().toString();
+                comparar();
             }
         });
 
@@ -178,6 +164,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn5 = (Button) v;
                 valorBtn5 = btn5.getText().toString();
+                comparar();
             }
         });
 
@@ -199,6 +186,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn6 = (Button) v;
                 valorBtn6 = btn6.getText().toString();
+                comparar();
             }
         });
 
@@ -220,6 +208,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn7 = (Button) v;
                 valorBtn7 = btn7.getText().toString();
+                comparar();
             }
         });
 
@@ -241,6 +230,7 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn8 = (Button) v;
                 valorBtn8 = btn8.getText().toString();
+                comparar();
             }
         });
 
@@ -262,15 +252,16 @@ public class GatoActivity extends AppCompatActivity {
 
                 btn9 = (Button) v;
                 valorBtn9 = btn9.getText().toString();
+                comparar();
             }
         });
 
-        if(valorBtn1.equals(valorBtn2) && valorBtn2.equals(valorBtn3)){
-            txtv_ganador.setText("Ganador: Jugador #");
-        }
 
+    }
 
-        /*if((valorBtn1.equals("X") && valorBtn2.equals("X") && valorBtn3.equals("X"))
+    public void comparar(){
+
+        if((valorBtn1.equals("X") && valorBtn2.equals("X") && valorBtn3.equals("X"))
                 || (valorBtn4.equals("X") && valorBtn5.equals("X") && valorBtn6.equals("X"))
                 || (valorBtn7.equals("X") && valorBtn8.equals("X") && valorBtn9.equals("X"))
                 || (valorBtn1.equals("X") && valorBtn4.equals("X") && valorBtn7.equals("X"))
@@ -292,13 +283,13 @@ public class GatoActivity extends AppCompatActivity {
             btn9.setEnabled(false);
 
         }else if ((valorBtn1.equals("O") && valorBtn2.equals("O") && valorBtn3.equals("O"))
-                    || (valorBtn4.equals("O") && valorBtn5.equals("O") && valorBtn6.equals("O"))
-                    || (valorBtn7.equals("O") && valorBtn8.equals("O") && valorBtn9.equals("O"))
-                    || (valorBtn1.equals("O") && valorBtn4.equals("O") && valorBtn7.equals("O"))
-                    || (valorBtn2.equals("O") && valorBtn5.equals("O") && valorBtn8.equals("O"))
-                    || (valorBtn3.equals("O") && valorBtn6.equals("O") && valorBtn9.equals("O"))
-                    || (valorBtn1.equals("O") && valorBtn5.equals("O") && valorBtn9.equals("O"))
-                    || (valorBtn3.equals("O") && valorBtn5.equals("O") && valorBtn7.equals("O"))){
+                || (valorBtn4.equals("O") && valorBtn5.equals("O") && valorBtn6.equals("O"))
+                || (valorBtn7.equals("O") && valorBtn8.equals("O") && valorBtn9.equals("O"))
+                || (valorBtn1.equals("O") && valorBtn4.equals("O") && valorBtn7.equals("O"))
+                || (valorBtn2.equals("O") && valorBtn5.equals("O") && valorBtn8.equals("O"))
+                || (valorBtn3.equals("O") && valorBtn6.equals("O") && valorBtn9.equals("O"))
+                || (valorBtn1.equals("O") && valorBtn5.equals("O") && valorBtn9.equals("O"))
+                || (valorBtn3.equals("O") && valorBtn5.equals("O") && valorBtn7.equals("O"))){
 
             txtv_ganador.setText("Ganador: Jugador 2");
 
@@ -311,9 +302,46 @@ public class GatoActivity extends AppCompatActivity {
             btn7.setEnabled(false);
             btn8.setEnabled(false);
             btn9.setEnabled(false);
+        }
+    }
 
-        }*/
+    public void limpiar(){
+
+        valorBtn1=" ";
+        valorBtn2=" ";
+        valorBtn3=" ";
+        valorBtn4=" ";
+        valorBtn5=" ";
+        valorBtn6=" ";
+        valorBtn7=" ";
+        valorBtn8=" ";
+        valorBtn9=" ";
+
+        btn1.setEnabled(true);
+        btn2.setEnabled(true);
+        btn3.setEnabled(true);
+        btn4.setEnabled(true);
+        btn5.setEnabled(true);
+        btn6.setEnabled(true);
+        btn7.setEnabled(true);
+        btn8.setEnabled(true);
+        btn9.setEnabled(true);
+
+        btn1.setText(" ");
+        btn2.setText(" ");
+        btn3.setText(" ");
+        btn4.setText(" ");
+        btn5.setText(" ");
+        btn6.setText(" ");
+        btn7.setText(" ");
+        btn8.setText(" ");
+        btn9.setText(" ");
+
+        txtv_ganador.setText("Ganador: ????");
+
+        Toast.makeText(GatoActivity.this, "Turno Jugador 1", Toast.LENGTH_SHORT).show();
 
     }
+
 
 }
